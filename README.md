@@ -1,4 +1,4 @@
-# copy-clipboard-js [![NPM Downloads][downloads-image]][downloads-url]
+# copy-clipboard-react [![NPM Downloads][downloads-image]][downloads-url]
 
 [downloads-image]: https://img.shields.io/npm/dm/copy-clipboard-react.svg
 [downloads-url]: https://npmcharts.com/compare/copy-clipboard-react?minimal=true
@@ -17,7 +17,7 @@ This package is also especially useful if you need an alternative to:
 - **`navigator.clipboard.writeText`**
 
 Both of these approaches require **secure connections (HTTPS)** and will not work on **unsecure connections (HTTP)**.  
-`copy-clipboard-clipboard` avoids that limitation, making it reliable in environments where HTTPS is not available.
+`copy-clipboard-react` avoids that limitation, making it reliable in environments where HTTPS is not available.
 
 ## This is Dependency-Free
 
