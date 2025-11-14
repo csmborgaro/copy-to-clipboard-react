@@ -1,0 +1,26 @@
+{
+  "name": "copy-clipboard-react",
+  "version": "2.1.3",
+  "description": "Directly copy any string to clipboard in react.js with this module. FORK OF maifeeulasad's work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npx tsc --declaration --allowJs --checkJs --emitDeclarationOnly index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csmborgaro/copy-to-clipboard-react.git"
+  },
+  "keywords": [
+    "clipboard",
+    "clip-board",
+    "copy"
+  ],
+  "author": "Caseum Borgaro <borgaro.apl@gmail.com> (https://github.com/csmborgaro)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csmborgaro/copy-to-clipboard-react/issues"
+  },
+  "homepage": "https://github.com/csmborgaro/copy-to-clipboard-react#readme",
+  "types": "./index.d.ts"
+}
