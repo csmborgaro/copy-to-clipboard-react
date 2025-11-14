@@ -3,54 +3,80 @@
 [downloads-image]: https://img.shields.io/npm/dm/copy-clipboard-react.svg
 [downloads-url]: https://npmcharts.com/compare/copy-clipboard-react?minimal=true
 
-Instantly copy any string to the clipboard in React.js with this super lightweight module.
-This is direct fork of maifeeulasad's [copy-clipboard-js](github.com/maifeeulasad/react.js-copy-clipboard) so all credits go to them.
+A super lightweight React.js utility to instantly copy any string to the clipboard.  
+This package is a direct fork of maifeeulasad's [copy-clipboard-js](https://github.com/maifeeulasad/react.js-copy-clipboard), full credit goes to them.
+
+---
 
 ## Why Use This Package?
 
-The difference between this and their `copy-clipboard-js` is that this package uses **`<textarea>`** element instead of an `<input>`.  
-This ensures that when copying **multi-line text**, the original formatting including `\n` (newline characters) is preserved exactly as written.
+Unlike `copy-clipboard-js`, this package uses a **`<textarea>`** element instead of an `<input>`.  
+This ensures that when copying **multi-line text**, the original formatting (including `\n` newline characters) is preserved exactly.
 
-This package is also especially useful if you need an alternative to:
+It’s especially useful as an alternative to:
 
-- **MDN TypeScript lib.dom `.ts` clipboard APIs**
+- **MDN TypeScript `lib.dom.ts` clipboard APIs**
 - **`navigator.clipboard.writeText`**
 
-Both of these approaches require **secure connections (HTTPS)** and will not work on **unsecure connections (HTTP)**.  
+Both of these approaches require **secure connections (HTTPS)** and will fail on **HTTP**.  
 `copy-clipboard-react` avoids that limitation, making it reliable in environments where HTTPS is not available.
 
-## This is Dependency-Free
+---
 
-- 0 dependencies
-- Lightweight
+## Features
+
+- Zero dependencies  
+- Lightweight and fast  
+- Works with multi-line text  
+- No HTTPS requirement  
+
+---
 
 ## Installation
 
-Run this command in your terminal:
+Install via terminal:
 
 ```bash
-npm i copy-clipboard-react
+npm install copy-clipboard-react
 ```
 
-Or, directly add it to your `package.json`:
+Or add it directly to your `package.json`:
 
 ```json
-"copy-clipboard-react": "^1.0.3"
+"copy-clipboard-react": "^2.1.4"
 ```
-(change the version number to whatever is available [here](https://www.npmjs.com/package/copy-clipboard-react?activeTab=versions))
 
-## Example usage
-#### React.js
+*(Check the latest version [here](https://www.npmjs.com/package/copy-clipboard-react?activeTab=versions))*
 
-parameters:
- * @param {string} text_to_copy - Text to be copied to clipboard
- * @param {boolean} [alert_or_not=false] - Whether to show an alert after copying
+---
 
-`copyText = function (text_to_copy, alert_or_not = false)`
+## Usage Example
+
+### React.js
+
+**Function signature:**
+
+```ts
+copyText(text_to_copy: string, alert_or_not?: boolean): void
+```
+
+- `text_to_copy` - The text you want to copy  
+- `alert_or_not` *(optional, default = false)* - Show an alert after copying  
+
+**Example:**
 
 ```javascript
 import * as ccr from "copy-clipboard-react";
 
 // Copy text anywhere in your app
 ccr.copyText("something to copy!");
+
+// With alert
+ccr.copyText("copied with alert!", true);
 ```
+
+---
+
+## License
+
+MIT
